@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Avenir+Next:wght@400;500;600;700&family=Roboto:wght@400;500;700&family=Work+Sans:wght@400;500;600;700&display=swap');
+
+// Variables
+$font-family-primary: 'Work Sans', sans-serif;
+$font-family-secondary: 'Avenir Next', 'Roboto', sans-serif;
+
+$color-primary: #39CDCC;
+$color-primary-dark: #213F7D;
+$color-text-primary: #213F7D;
+$color-text-secondary: #545F7D;
+$color-white: #FFFFFF;
+$color-bg-light: #FBFBFB;
+$color-border: #545F7D26;
+
+$breakpoint-mobile: 768px;
+
+// Reset
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: $font-family-primary;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: $color-bg-light;
+    color: $color-text-primary;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-family: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+input {
+    font-family: inherit;
+}

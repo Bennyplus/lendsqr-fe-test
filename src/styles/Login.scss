@@ -1,0 +1,190 @@
+@import './global.scss';
+
+.login-page {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  background-color: $color-white;
+
+  // Left Section (Brand / Illustration)
+  .left-section {
+    display: none; // Hidden on mobile by default or customized per requirement
+    width: 50%;
+    background-color: $color-white; // Or maybe a slight tint if per design
+    flex-direction: column;
+    padding: 60px 80px;
+    position: relative;
+
+    @media (min-width: $breakpoint-mobile) {
+      display: flex;
+    }
+
+    .brand-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 40px;
+
+      .logo-icon {
+        width: 25px;
+        height: 25px; // Approximate
+      }
+      
+      .brand-text {
+        height: 20px; 
+      }
+    }
+
+    .illustration-container {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+    }
+  }
+
+  // Right Section (Authentication Panel)
+  .right-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    background-color: $color-white;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05); // Subtle shadow for elevation
+    
+    @media (min-width: $breakpoint-mobile) {
+      width: 50%;
+      box-shadow: none;
+      padding: 100px; // More padding on desktop
+    }
+
+    // Mobile Brand Header (Optional - if we want logo visible on mobile top)
+    .mobile-brand-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 60px;
+      
+      @media (min-width: $breakpoint-mobile) {
+        display: none;
+      }
+
+      .logo-icon { width: 20px; }
+      .brand-text { height: 16px; }
+    }
+
+    .welcome-header {
+      margin-bottom: 50px;
+
+      h1 {
+        font-family: $font-family-secondary;
+        font-size: 40px;
+        font-weight: 700;
+        color: $color-text-primary;
+        margin-bottom: 15px;
+        line-height: 1.1;
+      }
+
+      p {
+        font-size: 20px;
+        color: $color-text-secondary;
+        font-weight: 400;
+      }
+    }
+
+    .login-form-container {
+      width: 100%;
+      max-width: 447px; // Based on common design constraints
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+
+      .input-group {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        input {
+          width: 100%;
+          padding: 16px;
+          border: 2px solid $color-border;
+          border-radius: 5px;
+          font-size: 14px;
+          color: $color-text-primary;
+          transition: border-color 0.2s;
+
+          &::placeholder {
+            color: $color-text-secondary;
+            opacity: 0.6;
+          }
+
+          &:focus {
+            border-color: $color-primary;
+          }
+        }
+        
+        .password-toggle {
+          position: absolute;
+          right: 16px;
+          top: 50%;
+          transform: translateY(-50%);
+          background: none;
+          color: $color-primary;
+          font-size: 12px;
+          font-weight: 600;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+        }
+      }
+
+      .forgot-password {
+        text-align: left;
+        margin-top: -8px; 
+        
+        a {
+          color: $color-primary;
+          font-size: 12px;
+          font-weight: 600;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .login-button {
+        background-color: $color-primary;
+        color: $color-white;
+        border-radius: 5px;
+        padding: 16px;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        margin-top: 10px;
+        transition: background-color 0.2s;
+
+        &:hover {
+          background-color: lighten($color-primary, 5%);
+        }
+        
+        &:disabled {
+          background-color: lighten($color-primary, 20%);
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+}

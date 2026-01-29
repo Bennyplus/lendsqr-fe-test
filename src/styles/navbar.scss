@@ -1,0 +1,145 @@
+@import './global.scss';
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 30px;
+  background-color: $color-white;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.02); // Subtle shadow
+  height: 100px; // Approximate based on visual weight
+
+  // 1. Logo Section
+  .navbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 200px; // Fixed width to align with sidebar if needed
+
+    .logo-icon {
+      width: 22px;
+      height: 22px;
+    }
+
+    .logo-text {
+      height: 27px;
+    }
+  }
+
+  // 2. Search Bar
+  .navbar-search {
+    display: flex;
+    align-items: center;
+    width: 400px; // Approximate
+    border-radius: 8px;
+    overflow: hidden;
+
+    input {
+      flex: 1;
+      border: 1px solid $color-border;
+      border-right: none;
+      padding: 12px 16px;
+      border-radius: 8px 0 0 8px;
+      outline: none;
+      font-size: 14px;
+      color: $color-text-primary;
+
+      &::placeholder {
+        color: $color-text-secondary;
+      }
+    }
+
+    button {
+      background-color: $color-primary;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 0 8px 8px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      height: 43px; // Match input height roughly (12px padding * 2 + font + borders) 
+
+      .search-icon {
+        width: 14px;
+        height: 14px;
+        fill: white;
+      }
+
+      &:hover {
+        background-color: darken($color-primary, 5%);
+      }
+    }
+  }
+
+  // 3. Right Actions
+  .navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    .docs-link {
+        font-family: $font-family-secondary;
+        font-size: 16px;
+        color: $color-text-primary;
+        text-decoration: underline;
+        cursor: pointer;
+        
+        &:hover {
+            color: $color-primary;
+        }
+    }
+
+    .notification-icon {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      color: $color-text-primary;
+    }
+
+    .user-profile {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+
+      .avatar {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .user-name {
+        font-family: $font-family-primary;
+        font-weight: 500;
+        font-size: 16px;
+        color: $color-text-primary;
+      }
+
+      .dropdown-icon {
+        width: 10px; 
+        height: 10px;
+        fill: $color-text-primary;
+      }
+    }
+  }
+
+  // Mobile Responsiveness
+  @media (max-width: $breakpoint-mobile) {
+    height: auto;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+
+    .navbar-search {
+      width: 100%;
+    }
+
+    .navbar-actions {
+      width: 100%;
+      justify-content: space-between;
+      gap: 0;
+    }
+  }
+}
