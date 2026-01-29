@@ -8,11 +8,10 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "mock:api": "json-server --watch MOCK_DATA.json --port 3000",
-    "start": "tsx server.ts"
+    "mock:api": "json-server --watch MOCK_DATA.json --port 3000"
   },
   "dependencies": {
-    "json-server": "^0.17.4",
+    "json-server": "^1.0.0-beta.5",
     "lucide-react": "^0.563.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
@@ -29,7 +28,6 @@
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
     "globals": "^16.5.0",
-    "tsx": "^4.21.0",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.46.4",
     "vite": "^7.2.4"
