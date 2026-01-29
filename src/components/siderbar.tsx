@@ -1,7 +1,25 @@
 import React from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import "../styles/sidebar.scss";
-
+import userIcon from "../assets/user-friends 1.png";
+import guarantorIcon from "../assets/users 1.svg";
+import loanIcon from "../assets/sack 1.png";
+import decisionIcon from "../assets/handshake-regular 1.png";
+import savingsIcon from "../assets/piggy-bank 1.svg";
+import loanRequestIcon from "../assets/Group 104.svg";
+import whitelistIcon from "../assets/user-check 1.png";
+import karmaIcon from "../assets/user-times 1.png";
+import businessIcon from "../assets/briefcase 1.png";
+import savingsProductsIcon from "../assets/np_bank_148501_000000 1.png";
+import feesAndChargesIcon from "../assets/coins-solid 1.png";
+import transactionsIcon from "../assets/icon19.png";
+import reportsIcon from "../assets/chart-bar 2.svg";
+import servicesIcon from "../assets/galaxy 1.png";
+import serviceAccountIcon from "../assets/user-cog 1.png";
+import settlementsIcon from "../assets/scroll 1.png";
+import slidersIcon from "../assets/sliders-h 1.png";
+import auditLogsIcon from "../assets/clipboard-list 1.png";
+import feesAndChargesIcon2 from "../assets/badge-percent 1.png";
 // Placeholder Icons (Using simple SVGs or imported assets if available)
 // Ideally, we imports these from assets folder. using inline SVGs for speed/demo.
 const BriefcaseIcon = () => (
@@ -150,89 +168,89 @@ const Sidebar: React.FC = () => {
           `nav-item ${isActive || location.pathname.startsWith("/users") ? "active" : ""}`
         }
       >
-        <UserIcon />
+        <img src={userIcon} alt="usericon" />
         <span>Users</span>
       </NavLink>
       <div className="nav-item">
-        <GenericIcon />
+        <img src={guarantorIcon} alt="guarantoricon" />
         <span>Guarantors</span>
       </div>
       <div className="nav-item">
-        <GenericIcon />
+        <img src={loanIcon} alt="loanicon" />
         <span>Loans</span>
       </div>
       <div className="nav-item">
-        <GenericIcon />
+        <img src={decisionIcon} alt="decisionicon" />
         <span>Decision Models</span>
       </div>
       <div className="nav-item">
-        <GenericIcon />
+        <img src={savingsIcon} alt="savingsicon" />
         <span>Savings</span>
       </div>
       <div className="nav-item">
-        <GenericIcon />
+        <img src={loanRequestIcon} alt="loanrequesticon" />
         <span>Loan Requests</span>
       </div>
       <div className="nav-item">
-        <GenericIcon />
+        <img src={whitelistIcon} alt="whitelisticon" />
         <span>Whitelist</span>
       </div>
       <div className="nav-item">
-        <GenericIcon />
+        <img src={karmaIcon} alt="karmaicon" />
         <span>Karma</span>
       </div>
 
       {/* BUSINESSES */}
       <div className="section-header">BUSINESSES</div>
       <div className="nav-item">
-        <BriefcaseIcon />
+        <img src={businessIcon} alt="businessicon" />
         <span>Organization</span>
       </div>
       <div className="nav-item">
-        <GenericIcon />
+        <img src={loanRequestIcon} alt="loanRequestIcon" />
         <span>Loan Products</span>
       </div>
       <div className="nav-item">
-        <GenericIcon />
+        <img src={savingsProductsIcon} alt="savingsProductsIcon" />
         <span>Savings Products</span>
       </div>
       <div className="nav-item">
-        <GenericIcon />
+        <img src={feesAndChargesIcon} alt="feesAndChargesIcon" />
         <span>Fees and Charges</span>
       </div>
       <div className="nav-item">
-        <GenericIcon />
+        <img src={transactionsIcon} alt="transactionsIcon" />
         <span>Transactions</span>
       </div>
       <div className="nav-item">
-        <GenericIcon />
+        <img src={servicesIcon} alt="servicesIcon" />
         <span>Services</span>
       </div>
       <div className="nav-item">
-        <GenericIcon />
+        <img src={serviceAccountIcon} alt="serviceAccountIcon" />
         <span>Service Account</span>
       </div>
       <div className="nav-item">
-        <GenericIcon />
+        <img src={settlementsIcon} alt="settlementsIcon" />
         <span>Settlements</span>
       </div>
       <div className="nav-item">
-        <GenericIcon />
+        <img src={reportsIcon} alt="reportsIcon" />
         <span>Reports</span>
       </div>
 
       {/* SETTINGS */}
       <div className="section-header">SETTINGS</div>
       <div className="nav-item">
-        <GenericIcon />
+        <img src={slidersIcon} alt="slidersIcon" />
         <span>Preferences</span>
       </div>
       <div className="nav-item">
-        <GenericIcon />
+        <img src={feesAndChargesIcon2} alt="feesAndChargesIcon" />
         <span>Fees and Pricing</span>
       </div>
       <div className="nav-item">
-        <GenericIcon />
+        <img src={auditLogsIcon} alt="auditLogsIcon" />
         <span>Audit Logs</span>
       </div>
     </div>
